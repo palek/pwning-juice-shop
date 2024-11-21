@@ -42,13 +42,13 @@ into the _Search..._ field and hit Enter
 
 . Follow the link to titled _Check out our boring terms of use if you
 are interested in such lame stuff_
-(http://localhost:3000/ftp/legal.adoc) on the _About Us_ page.
+(http://localhost:3000/ftp/legal.md) on the _About Us_ page.
 . Successfully attempt to browse the directory by changing the URL into
 http://localhost:3000/ftp
 +
 image::appendix/ftp_directory.png[FTP directory browser]
 
-. Open http://localhost:3000/ftp/acquisitions.adoc to solve the
+. Open http://localhost:3000/ftp/acquisitions.md to solve the
 challenge.
 
 === Provoke an error that is neither very gracefully nor consistently handled
@@ -1250,7 +1250,7 @@ via http://localhost:3000/#/contact to solve this challenge
 
 . Use the _Poison Null Byte_ attack described in
 <<_access_a_developers_forgotten_backup_file,Access a developer's forgotten backup file>>...
-. ...to download http://localhost:3000/ftp/eastere.gg%2500.adoc
+. ...to download http://localhost:3000/ftp/eastere.gg%2500.md
 
 === Apply some advanced cryptanalysis to find the real easter egg
 
@@ -1318,12 +1318,12 @@ challenge solved.
 fail complaining about an illegal file type.
 . Using a _Poison Null Byte_ (`%00`) the filter can be tricked, but
 only with a twist:
- ** Accessing http://localhost:3000/ftp/package.json.bak%00.adoc will
+ ** Accessing http://localhost:3000/ftp/package.json.bak%00.md will
 surprisingly *not* succeed...
  ** ...because the `%` character needs to be URL-encoded (into `%25`)
 as well in order to work its magic later during the file system
 access.
-. http://localhost:3000/ftp/package.json.bak%2500.adoc will ultimately
+. http://localhost:3000/ftp/package.json.bak%2500.md will ultimately
 solve the challenge.
 
 === Access a salesman's forgotten backup file
@@ -1331,7 +1331,7 @@ solve the challenge.
 . Use the _Poison Null Byte_ attack described in
 <<_access_a_developers_forgotten_backup_file,Access a developer's forgotten backup file>>...
 . ...to download
-http://localhost:3000/ftp/coupons_2013.adoc.bak%2500.adoc
+http://localhost:3000/ftp/coupons_2013.md.bak%2500.md
 
 === Log in with Bjoern's Gmail account
 
@@ -1390,7 +1390,7 @@ emails!
 . Use the _Poison Null Byte_ attack described in
 <<_access_a_developers_forgotten_backup_file,Access a developer's forgotten backup file>>...
 . ...to download
-http://localhost:3000/ftp/suspicious_errors.yml%2500.adoc
+http://localhost:3000/ftp/suspicious_errors.yml%2500.md
 
 === Let the server sleep for some time
 
@@ -2485,18 +2485,18 @@ image::appendix/tweet_zip-complaints.png[Tweet advertising ZIP uploads in File C
 https://res.cloudinary.com/snyk/image/upload/v1528192501/zip-slip-vulnerability/technical-whitepaper.pdf[Zip Slip] which
 exploits directory traversal filenames in file archives.
 . As the Legal Information file you need to override lives in
-http://localhost:3000/ftp/legal.adoc and uploading files via _File
+http://localhost:3000/ftp/legal.md and uploading files via _File
 Complaint_ does not give any feedback where they are stored, an
 iterative directory traversal approach is recommended.
-. Prepare a ZIP file (on Linux) with `zip exploit.zip ../ftp/legal.adoc`.
+. Prepare a ZIP file (on Linux) with `zip exploit.zip ../ftp/legal.md`.
 . Log in as any user at http://localhost:3000/#/login.
 . Click _Contact Us_ and _Complain?_ to get to the _File Complaint_
 screen at http://localhost:3000/#/complain.
 . Type in any message and attach your ZIP file, then click _Submit_.
 . The challenge will _not_ be solved. Repeat steps 5-7 but with `zip
-exploit.zip ../../ftp/legal.adoc` as the payload.
+exploit.zip ../../ftp/legal.md` as the payload.
 . The challenge will be marked as solved! When you visit
-http://localhost:3000/ftp/legal.adoc you will see your overwritten
+http://localhost:3000/ftp/legal.md you will see your overwritten
 Legal Information!
 
 ____
@@ -2522,7 +2522,7 @@ totally different attack styles.
 
 . Solve challenge
 <<_access_a_salesmans_forgotten_backup_file,Access a salesman's forgotten backup file>>
-to get the `coupons_2013.adoc.bak` file with old coupon codes which you
+to get the `coupons_2013.md.bak` file with old coupon codes which you
 find listed below.
 . There is an obvious pattern in the last characters, as the first
 eleven codes end with `gC7sn` and the last with `gC7ss`.
